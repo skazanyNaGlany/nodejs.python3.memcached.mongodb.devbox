@@ -49,11 +49,10 @@ services:
     volumes:
       - ./db:/data/db
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
-#      - mongodata:/data/db
     environment:
       - DISPLAY=${DISPLAY}
-#    ports:
-#      - "127.0.0.1:28017:28017"
+    ports:
+      - "127.0.0.1:28017:27017"
     stdin_open: true
     tty: true
 
