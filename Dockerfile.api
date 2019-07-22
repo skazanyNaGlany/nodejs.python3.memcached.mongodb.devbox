@@ -3,10 +3,6 @@ FROM alpine:latest
 ADD api /var/www
 WORKDIR /var/www
 
-EXPOSE 38080:8080
-EXPOSE 38443:8443
-EXPOSE 30022:22
-
 ENV LANG C.UTF-8
 ENV LC_ALL C.UTF-8
 ENV LC_CTYPE C.UTF-8
@@ -27,11 +23,11 @@ RUN apk add sudo
 RUN apk add curl
 RUN apk add busybox-extras
 
-RUN echo "**** install Python ****" && \
+RUN echo "install Python" && \
     apk add --no-cache python3 && \
     if [ ! -e /usr/bin/python ]; then ln -sf python3 /usr/bin/python ; fi && \
     \
-    echo "**** install pip ****" && \
+    echo "install pip" && \
     python3 -m ensurepip && \
     rm -r /usr/lib/python*/ensurepip && \
     pip3 install --no-cache --upgrade pip setuptools wheel && \

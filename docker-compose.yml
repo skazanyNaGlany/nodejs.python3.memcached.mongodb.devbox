@@ -51,8 +51,18 @@ services:
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
     environment:
       - DISPLAY=${DISPLAY}
+    stdin_open: true
+    tty: true
+
+  dbadmin.devbox:
+    build:
+      context: .
+      dockerfile: Dockerfile.dbadmin
+    shm_size: 1g
+    mem_limit: 1g
+    hostname: dbadmin.devbox
     ports:
-      - "127.0.0.1:28017:27017"
+      - "127.0.0.1:58081:8081"
     stdin_open: true
     tty: true
 
