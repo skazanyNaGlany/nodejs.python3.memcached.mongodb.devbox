@@ -15,22 +15,22 @@ Your ```db/``` directory is mapped to container and contains db data.
 
 Your MongoDB admin panel (Mongo-express) is accessible via ```http://localhost:58081/```
 
-## Access www shell:
+## Access www shell
 ```
 ./devbox_shell.sh www
 ```
 
-## Access api shell:
+## Access api shell
 ```
 ./devbox_shell.sh api
 ```
 
-## Access db shell:
+## Access db shell
 ```
 ./devbox_shell.sh db
 ```
 
-## Access dbpanel shell:
+## Access dbpanel shell
 ```
 ./devbox_shell.sh dbpanel
 ```
