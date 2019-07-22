@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile.www
     shm_size: 1g
-    mem_limit: 1g
+    mem_limit: 512m
     hostname: www.devbox
     volumes:
       - ./www:/var/www
@@ -25,7 +25,7 @@ services:
       context: .
       dockerfile: Dockerfile.api
     shm_size: 1g
-    mem_limit: 1g
+    mem_limit: 256m
     hostname: api.devbox
     volumes:
       - ./api:/var/www
@@ -59,7 +59,7 @@ services:
       context: .
       dockerfile: Dockerfile.dbadmin
     shm_size: 1g
-    mem_limit: 1g
+    mem_limit: 64m
     hostname: dbadmin.devbox
     ports:
       - "127.0.0.1:58081:8081"
