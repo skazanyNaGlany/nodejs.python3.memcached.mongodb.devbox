@@ -37,8 +37,7 @@ RUN echo "**** install Python ****" && \
     pip3 install --no-cache --upgrade pip setuptools wheel && \
     if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi
 
-
-# your stuff here
-
 RUN apk add python3-dev
 RUN apk add alpine-sdk
+
+# your stuff here
