@@ -40,4 +40,6 @@ RUN echo "**** install Python ****" && \
 RUN apk add python3-dev
 RUN apk add alpine-sdk
 
+RUN pip3 install virtualenv
+
 # your stuff here
