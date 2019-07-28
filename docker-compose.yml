@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile.www
     shm_size: 1g
-    mem_limit: 512m
+    mem_limit: 1g
     hostname: www.devbox
     volumes:
       - ./www:/var/www
