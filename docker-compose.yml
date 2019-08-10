@@ -37,6 +37,18 @@ services:
     stdin_open: true
     tty: true
 
+  memcached.devbox:
+    build:
+      context: .
+      dockerfile: Dockerfile-memcached
+    shm_size: 1g
+    mem_limit: 64m
+    hostname: memcached.devbox
+    ports:
+      - "127.0.0.1:48211:11211"
+    stdin_open: true
+    tty: true
+
   db.devbox:
     build:
       context: .
