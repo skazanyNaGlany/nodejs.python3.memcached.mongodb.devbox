@@ -4,7 +4,7 @@ services:
   www.devbox:
     build:
       context: .
-      dockerfile: Dockerfile.www
+      dockerfile: Dockerfile-www
     shm_size: 1g
     mem_limit: 1g
     hostname: www.devbox
@@ -22,7 +22,7 @@ services:
   api.devbox:
     build:
       context: .
-      dockerfile: Dockerfile.api
+      dockerfile: Dockerfile-api
     shm_size: 1g
     mem_limit: 256m
     hostname: api.devbox
@@ -40,7 +40,7 @@ services:
   db.devbox:
     build:
       context: .
-      dockerfile: Dockerfile.db
+      dockerfile: Dockerfile-db
     shm_size: 1g
     mem_limit: 1g
     hostname: db.devbox
@@ -55,7 +55,7 @@ services:
   dbadmin.devbox:
     build:
       context: .
-      dockerfile: Dockerfile.dbadmin
+      dockerfile: Dockerfile-dbadmin
     shm_size: 1g
     mem_limit: 64m
     hostname: dbadmin.devbox
